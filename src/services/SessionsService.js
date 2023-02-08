@@ -30,7 +30,6 @@ class SessionsService {
       expiresIn
     });
 
-    // console.log(userExists);
     return { userExists, token };
 
   }

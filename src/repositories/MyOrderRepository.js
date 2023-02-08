@@ -37,8 +37,6 @@ class MyOrderRepository {
   async getOrder({ user_id }) {
     const order = await connectionKnex("orders").where({ user_id });
 
-    console.log(order);
-    // const showOrder = { ...order }
 
     return order;
   }
@@ -46,7 +44,6 @@ class MyOrderRepository {
   async deleteItem({ id }) {
     const order = await connectionKnex("orders").where({ id }).delete({ id });
 
-    // const user = await connectionKnex("orders").where({ user_id });
 
     return { order };
   }

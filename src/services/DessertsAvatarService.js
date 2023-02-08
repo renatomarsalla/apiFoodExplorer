@@ -19,7 +19,7 @@ class DessertsAvatarService {
       await diskStorage.deleteFile(dessertsAvatar.image);
     }
     else {
-      console.log('nao tem');
+      throw new AppError("Somente administradores podem alterar a foto", 401);
     }
 
     const filename = await diskStorage.saveFile(avatarFilename);

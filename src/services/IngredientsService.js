@@ -24,13 +24,10 @@ class IngredientsService {
       throw new AppError("Dish does not exist");
     }
 
-    console.log(dish);
 
-    // return dish;
 
     dish[0].ingredients = ingredients ?? dish[0].ingredients;
     dish[0].dish_id = dish_id ?? dish[0].dish_id;
-    // console.log(dish[0].Ingredients);
 
     const ingredientsUpdated = await this.ingredientsRepository.updateIngredients({
       dish_id: dish[0].dish_id,
@@ -46,13 +43,10 @@ class IngredientsService {
       throw new AppError("Dish does not exist");
     }
 
-    console.log(dish);
 
-    // return dish;
 
     dish[0].ingredients = ingredients ?? dish[0].ingredients;
     dish[0].dish_id = dish_id ?? dish[0].dish_id;
-    // console.log(dish[0].Ingredients);
 
     const ingredientsUpdated = await this.ingredientsRepository.updateDessertIngredients({
       dish_id: dish[0].dish_id,
@@ -68,13 +62,10 @@ class IngredientsService {
       throw new AppError("Dish does not exist");
     }
 
-    console.log(dish);
 
-    // return dish;
 
     dish[0].ingredients = ingredients ?? dish[0].ingredients;
     dish[0].dish_id = dish_id ?? dish[0].dish_id;
-    // console.log(dish[0].Ingredients);
 
     const ingredientsUpdated = await this.ingredientsRepository.updateDrinkIngredients({
       dish_id: dish[0].dish_id,

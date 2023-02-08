@@ -4,7 +4,6 @@ class IngredientsRepository {
   async indexIngredients(dish_id) {
     const id_dish = await connectionKnex('ingredients').where({ dish_id });
 
-    // console.log(id_dish)
 
     return (id_dish);
   }
@@ -12,7 +11,6 @@ class IngredientsRepository {
   async indexDessertIngredients(dish_id) {
     const id_dish = await connectionKnex('ingredientsDessert').where({ dish_id });
 
-    console.log(id_dish)
 
     return (id_dish);
   }
@@ -20,7 +18,6 @@ class IngredientsRepository {
   async indexDrinkIngredients(dish_id) {
     const id_dish = await connectionKnex('ingredientsDrink').where({ dish_id });
 
-    console.log(id_dish)
 
     return (id_dish);
   }
